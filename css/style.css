@@ -1,0 +1,971 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+/* links */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+/* headings */
+section {
+  padding: 8rem 0;
+}
+section h1 {
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: #ffff;
+  text-align: center;
+}
+h1::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100px;
+  background: #fea609;
+  margin: 0% auto;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+}
+.devs {
+  background-color: #000;
+  position: relative;
+  text-align: center;
+}
+/****************************************************** bottons */
+.btn {
+  font-size: 1.6rem;
+  padding: 0.8rem 3rem;
+  border-radius: 3rem;
+  border: solid 3px #fff;
+  /* background-color: #fea609; */
+}
+/****************************************************** header */
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(img/hero-img.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 8rem;
+  padding-top: 5rem;
+}
+.logo {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.logo span {
+  color: #fea609;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header nav ul li {
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+header nav ul li a:hover {
+  color: #fea609;
+  text-decoration: line-through;
+  transition: all 0.5s;
+}
+/* .hover {
+  color: #fea609;
+  text-decoration: line-through;
+  transition: all 0.5s;
+} */
+.fa-bars,
+.hamburger,
+.close-ham,
+.fa-xmark {
+  font-size: 3.8rem;
+  display: none;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+header .about {
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 8rem;
+  /* transform: translateY(-50%); */
+}
+header .about h2 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+header .about h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+.btn-about:hover,
+.btn-about:active {
+  background-color: #fea609;
+  transition: all 0.5s;
+  border: none;
+}
+header .about-discription {
+  display: block;
+  width: 36rem;
+  height: 36rem;
+  border: solid 1rem #fea609;
+  border-radius: 50%;
+  box-shadow: 5px 5px 3rem #fff;
+  position: absolute;
+  top: 30%;
+  right: 15rem;
+  opacity: 1;
+  transition: ease-in-out 1s;
+}
+header .about-discription img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.about-para {
+  width: 50rem;
+  position: absolute;
+  top: 42%;
+  right: 8rem;
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+.about-para h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.about-para h1::after {
+  margin-bottom: 2rem;
+}
+.about-para p {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+/**************************************************************************** services  */
+.services-section {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 6rem;
+}
+.services-list .box {
+  width: 100%;
+  height: auto;
+  padding: 4rem;
+  /* overflow: hidden; */
+  box-shadow: 0 0 1rem #555;
+  margin: 0 2rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
+}
+.services-list .box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: solid 1px #fff;
+  border-top: solid 1px #fff;
+  transition: all 0.5s;
+}
+.services-list .box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-right: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  transition: all 0.5s;
+}
+.services-list .box:hover::before,
+.services-list .box:hover::after {
+  width: 20%;
+  height: 20%;
+  border-color: #fea609;
+  border-width: 3px;
+  transition: all 0.5s;
+}
+.services-list .box i {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.services-list .box h2 {
+  font-size: 2.2rem;
+  color: #fea609;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.services-list .box p {
+  font-size: 1.5rem;
+  /* padding: 0 2rem; */
+}
+
+/**************************************************************************** portfolio section */
+.portfolio-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)),
+    url(img/services-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.proj-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8rem;
+}
+.proj-list .proj {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  /* border: solid 5px #fea609; */
+  /* box-shadow: 1rem 1rem 0.5rem #000; */
+  padding: 1rem;
+  margin: 0 2rem;
+  text-align: center;
+}
+.proj-list div img {
+  width: 100%;
+  height: 100%;
+}
+.proj-list .proj h2 {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  /* text-align: left; */
+}
+/**************************************************************************** team section */
+.team-section {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  /* height: 100vh; */
+}
+.team-section p {
+  font-size: 3.2rem;
+  text-align: center;
+  font-weight: 400;
+}
+.team-section .team-list {
+  display: flex;
+  justify-content: space-around;
+  /* margin: 0 10rem; */
+}
+.team-section .teamate {
+  /* border: solid 1px #fff; */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 1rem #555;
+  cursor: pointer;
+}
+.team-section .teamate img {
+  width: 30.6rem;
+  height: 30.6rem;
+  margin-bottom: 1rem;
+  /* box-shadow: 0rem 0rem 1rem #555; */
+}
+.team-section .teamate-details {
+  /* border: solid 1px #fff; */
+  padding: 1rem;
+  box-shadow: 0rem 0rem 1rem #555;
+  border-radius: 1rem;
+}
+.team-section .teamate-details h4 {
+  color: #fea609;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.team-section .teamate-details h3 {
+  /* color: #000; */
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+.team-section .social-media {
+  display: inline-block;
+  background-color: #000;
+  box-shadow: 0 0 0.5rem #555;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.team-section .social-media i {
+  /* color: #000; */
+  padding-right: 0.8rem;
+  font-size: 1.5rem;
+  /* background: #000; */
+}
+.fa-instagram:hover {
+  color: #8a3ab9;
+}
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+.fa-github:hover {
+  color: #4078c0;
+}
+/************************************************************************* Contact Section */
+.contact-section {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)),
+    url(img/contact-background.jpg);
+  background-size: cover;
+  background-position: center;
+  /* height: 100vh; */
+}
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0rem 8rem;
+}
+.address-section h2::after,
+.form-section h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 8rem;
+  background: #fea609;
+  /* margin: 0% auto; */
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+}
+.address-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 1rem #555;
+  border-radius: 2rem;
+  padding: 2rem 5rem;
+}
+.address-section h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.address-section .box {
+  position: relative;
+  padding: 1.3rem 0;
+  display: flex;
+}
+.address-section .box .icon {
+  min-width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address-section .box .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.address-section .box .text h3 {
+  color: #fea609;
+  font-weight: 400;
+}
+.form-section {
+  width: 40%;
+  /* background-color: #000; */
+  box-shadow: 0 0 1rem #555;
+  border-radius: 2rem;
+  padding: 2rem 5rem;
+}
+.form-section h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.input-box {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+.input-box input,
+textarea {
+  display: inline-block;
+  padding: 0.9rem 0.5rem;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+.input-box input {
+  display: inline-block;
+  width: 100%;
+}
+.input-box input:first-child {
+  margin-right: 1rem;
+}
+textarea {
+  width: 100%;
+  display: block;
+  resize: none;
+}
+.contact-btn {
+  padding: 0.5rem 1rem;
+  /* text-align: left; */
+  transition: all 0.5s;
+}
+.contact-btn:hover {
+  color: #fea609;
+}
+/*************************************************************************** latest blogs */
+.blog-section {
+  background-color: #000;
+  /* height: 100vh; */
+}
+.blog-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-between; */
+  padding: 0 8rem;
+}
+.blog {
+  background: url(img/images.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40rem;
+  height: 25rem;
+  background-color: #fff;
+  color: #000;
+  margin-right: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  box-shadow: 0 0 1rem #fff;
+}
+.blog h3,
+p {
+  padding-top: 1rem;
+}
+/*****************************************************************************footer  */
+footer {
+  background-color: #000;
+  /* height: 50vh; */
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 0;
+  border-top: solid 1px #555;
+}
+footer nav p {
+  font-size: 1.4rem;
+}
+footer nav h2 {
+  font-size: 2.6rem;
+  font-weight: 500;
+  /* border-bottom: solid 3px #fea609; */
+}
+footer nav h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 40px;
+  background: #fea609;
+  /* margin: 0% auto; */
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+}
+footer nav li {
+  list-style: inside;
+}
+footer nav li a {
+  font-size: 1.4rem;
+}
+/* ******************************************************************************************* */
+/* RESPONSIVE */
+/********************************************************************************************* */
+@media screen and (max-width: 1240px) {
+  .about-para h1::after {
+    margin-bottom: 2rem;
+  }
+  .services-list .box {
+    padding: 3rem;
+  }
+  .about-para {
+    width: 45rem;
+    right: 4rem;
+  }
+  .about-para h1 {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 1160px) {
+  header .about h2 {
+    font-size: 4rem;
+    /* font-weight: 500; */
+  }
+
+  header .about-discription {
+    right: 8rem;
+  }
+  .about-para h1::after {
+    margin-bottom: 2rem;
+  }
+  .about-para p {
+    font-size: 1.4rem;
+  }
+
+  .team-section .team-list {
+    display: flex;
+    justify-content: space-around;
+    /* margin: 0 10rem; */
+  }
+  .team-section .teamate {
+    padding: 1.5rem;
+  }
+  .team-section .teamate img {
+    width: 28rem;
+    height: 28rem;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    display: flex;
+    padding: 0rem 4rem;
+  }
+  .address-section {
+    width: 45%;
+  }
+  .form-section {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .services-list {
+    padding: 0rem 2rem;
+  }
+  .services-list .box {
+    padding: 2rem 3rem;
+    margin: 0 1.4rem;
+  }
+}
+@media screen and (max-width: 1040px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .proj-list {
+    margin: 0 2rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  header nav {
+    margin: 0 6rem;
+  }
+  .logo {
+    font-size: 3rem;
+  }
+  header nav ul li {
+    padding: 1.8rem;
+  }
+  header .about {
+    left: 6rem;
+  }
+  header .about h2 {
+    font-size: 4rem;
+  }
+  .about-para {
+    width: 42rem;
+    right: 2rem;
+  }
+  .about-para h1 {
+    font-size: 3.2rem;
+  }
+  .about-para h1::after {
+    margin-bottom: 1.5rem;
+  }
+  .about-para p {
+    font-size: 1.6rem;
+  }
+
+  .services-list .box {
+    padding: 2rem;
+    margin: 0 1.2rem;
+  }
+  header .about-discription {
+    right: 6rem;
+    width: 32rem;
+    height: 32rem;
+  }
+  .team-section .team-list {
+    display: block;
+    margin: 0 14rem;
+  }
+  .team-section .teamate {
+    display: block;
+    /* width: 60%; */
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .team-section .teamate img {
+    width: 32rem;
+    height: 32rem;
+  }
+  .team-section .teamate-details h4 {
+    font-size: 1.6rem;
+  }
+  .team-section .teamate-details h3 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+  .team-section .social-media {
+    padding: 0.6rem 1rem;
+  }
+  .team-section .social-media i {
+    padding-right: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .container {
+    display: block;
+    padding: 0rem 4rem;
+  }
+  .address-section {
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .form-section {
+    width: 100%;
+  }
+
+  .blog-list {
+    display: block;
+    padding: 0 8rem;
+  }
+  .blog {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 880px) {
+  .hidden {
+    display: none;
+    transition: all 0.5s;
+  }
+  .hamburger {
+    display: block;
+    z-index: 2;
+    transition: all 0.5s;
+  }
+  header nav {
+    margin: 0;
+    z-index: 1;
+  }
+  .logo {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 4rem;
+  }
+  header nav ul {
+    /* background-color: #000; */
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 4;
+    text-align: center;
+    transition: all 0.5s;
+    /* padding: 4rem 0; */
+  }
+  header nav ul li {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  header nav ul li a:hover {
+    color: #fea609;
+    transition: all 0.5s;
+  }
+
+  header .about h2 {
+    font-size: 3.4rem;
+    font-weight: 500;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 2.4rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+  }
+  header .about {
+    left: 4rem;
+  }
+  header .about-discription {
+    right: 4rem;
+    width: 30rem;
+    height: 30rem;
+    top: 38%;
+  }
+  .about-para {
+    width: 38rem;
+    right: 0rem;
+  }
+  .about-para h1 {
+    font-size: 3.1rem;
+  }
+  .about-para p {
+    font-size: 1.5rem;
+  }
+
+  .services-list {
+    display: block;
+    padding: 0 12rem;
+  }
+  .services-list .box {
+    /* display: block; */
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    min-height: 30rem;
+    border-radius: 2rem;
+    border: none;
+    padding: 3rem;
+  }
+  .services-list .box::after {
+    display: none;
+  }
+  .services-list .box::before {
+    display: none;
+  }
+  .services-list .box i {
+    font-size: 5rem;
+  }
+  .services-list .box h2 {
+    font-size: 2.4rem;
+  }
+  .services-list .box p {
+    font-size: 1.8rem;
+  }
+  .proj-list {
+    display: block;
+    margin: 0 4rem;
+  }
+  .proj-list .proj {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  footer nav p {
+    font-size: 1.4rem;
+  }
+  footer nav h2 {
+    font-size: 2rem;
+  }
+  footer nav .logo {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .team-section .team-list {
+    display: block;
+    margin: 0 6rem;
+  }
+
+  header .about {
+    top: 65%;
+  }
+  header .about-discription {
+    /* left: 50%; */
+    width: 32rem;
+    height: 32rem;
+    top: 25%;
+  }
+  .about-para {
+    width: 38rem;
+    top: 25%;
+    right: 0%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .fa-bars,
+  .hamburger {
+    font-size: 3rem;
+    top: 2.5rem;
+    right: 2rem;
+  }
+  .logo {
+    margin-left: 2rem;
+    font-size: 2.4rem;
+  }
+  header .about-discription {
+    /* left: 50%; */
+    width: 28rem;
+    height: 28rem;
+    top: 22%;
+  }
+  .about-para {
+    max-width: 34rem;
+    top: 25%;
+  }
+  .services-list {
+    padding: 0 6rem;
+  }
+  .blog-list {
+    padding: 0;
+  }
+  .blog {
+    width: 30rem;
+    height: 25rem;
+  }
+  .blog h3,
+  p {
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  section h1 {
+    font-size: 3.2rem;
+  }
+  .services-list {
+    padding: 0 3rem;
+  }
+  .team-section .team-list {
+    margin: 0 1rem;
+  }
+  .team-section .teamate {
+    padding: 1rem;
+  }
+  .team-section .teamate img {
+    width: 28rem;
+    height: 28rem;
+  }
+  .container {
+    display: block;
+    padding: 0rem 2rem;
+  }
+  .address-section {
+    padding: 2rem;
+  }
+  .address-section h2,
+  .form-section h2 {
+    font-size: 2.4rem;
+  }
+  .address-section .box {
+    padding: 1.2rem 0;
+  }
+  .address-section .box .icon {
+    min-width: 4rem;
+    height: 4rem;
+    font-size: 1.8rem;
+  }
+  .address-section .box .text {
+    font-size: 1.4rem;
+  }
+
+  .form-section {
+    padding: 2rem;
+  }
+  .input-box {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  .input-box input,
+  textarea {
+    padding: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 0rem;
+  }
+  .address-section h2::after,
+  .form-section h2::after {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    display: block;
+    padding: 2rem 0rem;
+    padding-left: 1rem;
+    margin: 0 auto;
+  }
+  footer nav {
+    margin-bottom: 1rem;
+  }
+  footer .logo {
+    margin-left: 0;
+  }
+
+  footer nav p {
+    font-size: 1.4rem;
+  }
+  footer nav h2 {
+    font-size: 2.4rem;
+  }
+  footer nav h2::after {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  footer nav li {
+    list-style: inside;
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+  }
+}

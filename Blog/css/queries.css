@@ -1,0 +1,81 @@
+@media screen and (max-width: 1000px) {
+  .hidden {
+    display: none;
+  }
+  .hamburger,
+  .close-ham {
+    display: block;
+  }
+  header .navigation {
+    margin-left: 0rem;
+    padding: 0 1rem;
+  }
+  .tutorial {
+    margin-left: 0rem;
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .tutorial {
+    padding: 0 1rem;
+  }
+  .tutorial h1 {
+    font-size: 2.4rem;
+  }
+  .code-panel {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tutorial {
+    padding: 0 1rem;
+  }
+  .tutorial h1 {
+    font-size: 1.8rem;
+  }
+  .main-def {
+    font-size: 1.3rem;
+  }
+  .code-panel {
+    padding: 1rem;
+  }
+  .code-panel h2 {
+    font-size: 1.8rem;
+  }
+  .code {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .tutorial {
+    padding: 0 1rem;
+  }
+  .tutorial h1 {
+    font-size: 1.8rem;
+  }
+  .main-def {
+    font-size: 1.3rem;
+  }
+  .code-panel {
+    width: auto;
+    padding: 1rem;
+    overflow: auto;
+  }
+  .code-panel h2 {
+    font-size: 1.8rem;
+  }
+  .code {
+    font-size: 0.8rem;
+    overflow: hidden;
+    padding: 0.5rem;
+  }
+  .main-def {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  b {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,171 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #000;
+  font-size: 62.5%;
+}
+/* resuable */
+.main-def {
+  font-size: 1.6rem;
+  background-color: #fedb39;
+  padding: 0.5rem;
+}
+span {
+  color: #d61c4e;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+b {
+  font-size: 1.1rem;
+  color: #d61c4e;
+}
+
+/* links */
+a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 400;
+}
+ul {
+  margin-bottom: 1rem;
+}
+li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+/* headings */
+h1,
+h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+/* buttons */
+.btns-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.btn {
+  padding: 0.8rem 2rem;
+  background-color: #fedb39;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+/* header */
+header .navigation {
+  margin-left: 20rem;
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1cd6ce;
+  padding: 0 1rem;
+}
+.hamburger,
+.close-ham {
+  display: none;
+}
+.fa-bars {
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+.fa-xmark {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+}
+header .logo h1 {
+  font-size: 2rem;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+.nav-bar li {
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+}
+.nav-bar li a {
+  color: #fff;
+}
+.nav-bar li:hover {
+  background-color: #d61c4e;
+}
+
+/* side menu */
+.side-menu {
+  display: block;
+}
+.side-menu .topic-list {
+  background-color: #1cd6ce;
+  position: fixed;
+  top: 0%;
+  width: 20rem;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.side-menu .topic-list a {
+  color: #fff;
+  display: block;
+  font-size: 1.1rem;
+  padding: 0.2rem 0;
+  padding-left: 1rem;
+  text-transform: capitalize;
+}
+.side-menu h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+.side-menu a:hover {
+  background-color: #fedb39;
+}
+.side-menu a:active {
+  background-color: #d61c4e !;
+}
+a.active {
+  background-color: #293462;
+}
+
+/* tutorial */
+.tutorial {
+  margin-left: 20rem;
+  padding: 0 2rem;
+}
+.tutorial h1 {
+  font-size: 2.6rem;
+}
+.code-panel {
+  background-color: #293462;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+.code-panel h2 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.code {
+  border-left: solid 0.3rem #d61c4e;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+}
