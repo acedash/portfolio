@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark tech theme - always dark mode */
+    --background: 220 27% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 27% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 27% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Electric blue primary */
+    --primary: 207 89% 54%;
+    --primary-foreground: 220 27% 4%;
+
+    /* Darker secondary */
+    --secondary: 220 27% 8%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 27% 8%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Cyan accent */
+    --accent: 180 100% 70%;
+    --accent-foreground: 220 27% 4%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 27% 12%;
+    --input: 220 27% 8%;
+    --ring: 207 89% 54%;
+
+    --radius: 0.75rem;
+
+    /* Custom developer theme tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(207 89% 54%), hsl(180 100% 70%));
+    --gradient-background: linear-gradient(135deg, hsl(220 27% 4%) 0%, hsl(220 27% 6%) 100%);
+    --glow-primary: 0 0 50px hsl(207 89% 54% / 0.3);
+    --glow-accent: 0 0 30px hsl(180 100% 70% / 0.2);
+    
+    /* Typography */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
