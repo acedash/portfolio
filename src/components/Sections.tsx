@@ -43,16 +43,16 @@ export function Hero() {
   }, [titles.length]);
 
   return (
-    <section className="container pt-20 pb-16">
-      <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+    <section className="container pt-16 md:pt-20 pb-12 md:pb-16">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-12 md:mb-20">
         {/* Left Content */}
-        <div className="animate-fade-in-up">
+        <div className="animate-fade-in-up text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-fade-in-up animation-delay-100">
             <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
             Available for new projects
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up animation-delay-200">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up animation-delay-200">
             <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
               Hi, I'm Asrar
             </span>
@@ -60,22 +60,22 @@ export function Hero() {
           
           {/* Rotating Title with proper spacing */}
           <div className="mb-8 animate-fade-in-up animation-delay-250">
-            <div className="h-16 md:h-20 flex items-center">
-              <span className="text-2xl md:text-3xl lg:text-4xl text-blue-400 font-semibold transition-all duration-500 ease-in-out flex items-center gap-3">
+            <div className="h-12 md:h-20 flex items-center justify-center md:justify-start">
+              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-blue-400 font-semibold transition-all duration-500 ease-in-out flex items-center gap-3">
                 {titles[currentTitle].text}
-                <span className="text-3xl md:text-4xl lg:text-5xl">{titles[currentTitle].icon}</span>
+                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">{titles[currentTitle].icon}</span>
               </span>
             </div>
           </div>
           
-          <p className="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed mb-8 animate-fade-in-up animation-delay-300">
+          <p className="text-base md:text-xl text-slate-300 max-w-2xl leading-relaxed mb-8 animate-fade-in-up animation-delay-300 mx-auto md:mx-0">
             I help startups and businesses build custom software solutions that drive growth. 
             <span className="text-blue-400 font-semibold"> 5+ years</span> of experience delivering 
             <span className="text-blue-400 font-semibold"> measurable results</span>.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex gap-3 flex-wrap mb-8 animate-fade-in-up animation-delay-400">
+          <div className="flex gap-3 flex-wrap justify-center md:justify-start mb-8 animate-fade-in-up animation-delay-400">
             <a href="#contact" className="px-5 py-2.5 md:px-6 md:py-3 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 font-semibold text-white shadow-md hover:shadow-lg transition-colors text-sm md:text-base">
               Start Your Project
             </a>
@@ -85,7 +85,7 @@ export function Hero() {
           </div>
           
           {/* Quick Stats */}
-          <div className="flex gap-6 md:gap-8 animate-fade-in-up animation-delay-500">
+          <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-8 animate-fade-in-up animation-delay-500">
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">25+</div>
               <div className="text-xs md:text-sm text-slate-400">Happy Clients</div>
@@ -101,7 +101,7 @@ export function Hero() {
           </div>
 
           {/* Capabilities Strip */}
-          <div className="mt-6 text-slate-300/90 text-sm md:text-base flex flex-wrap items-center gap-3 md:gap-4">
+          <div className="mt-6 text-slate-300/90 text-sm md:text-base flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4">
             <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">🧩 Custom Software</span>
             <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">🛒 E‑commerce & SaaS</span>
             <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">🤖 Automation & Integrations</span>
