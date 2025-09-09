@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"hooks\\\\useBrands.ts -> @/lib/data\":{\"id\":\"hooks\\\\useBrands.ts -> @/lib/data\",\"files\":[]},\"hooks\\\\useProjects.ts -> @/lib/data\":{\"id\":\"hooks\\\\useProjects.ts -> @/lib/data\",\"files\":[]},\"hooks\\\\useTestimonials.ts -> @/lib/data\":{\"id\":\"hooks\\\\useTestimonials.ts -> @/lib/data\",\"files\":[]}}"

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "michael-rodriguez",
+    "quote": "Working with Asrar was like having a CTO on our team. He understood our business challenges and built solutions that actually solved them. ROI was 400% in the first year.",
+    "author": "Michael Rodriguez, Founder - TechStart Solutions",
+    "company": "TechStart Solutions",
+    "role": "Founder",
+    "rating": 5,
+    "order": 1
+  },
+  {
+    "id": "sarah-chen",
+    "quote": "Asrar delivered our e-commerce platform in half the time we expected, and it's been running flawlessly for 18 months. Our conversion rates increased by 25% within the first quarter.",
+    "author": "Sarah Chen, CEO - Fashion Forward Inc.",
+    "company": "Fashion Forward Inc.",
+    "role": "CEO",
+    "rating": 5,
+    "order": 2
+  }
+]

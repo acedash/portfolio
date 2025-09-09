@@ -1,6 +1,10 @@
 "use client";
 
-import { faqs, industries, projects, services, testimonials } from "@/lib/data";
+import { faqs, industries, services } from "@/lib/data";
+import { useProjects } from "@/hooks/useProjects";
+import { useTestimonials } from "@/hooks/useTestimonials";
+import { useBrands } from "@/hooks/useBrands";
+import { useSocialLinks } from "@/hooks/useSocialLinks";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -390,6 +394,7 @@ export function ServicesPreview() {
 }
 
 export function Projects({ showViewAllLink = false }: { showViewAllLink?: boolean } = {}) {
+  const { projects, loading, error } = useProjects();
   const [filter, setFilter] = useState<string>("All");
 
   const categories = ["All", "E-commerce", "Healthcare"];
@@ -401,6 +406,37 @@ export function Projects({ showViewAllLink = false }: { showViewAllLink?: boolea
   };
 
   const visibleProjects = projects.filter((p) => filter === "All" || projectCategory(p.name) === filter);
+
+  if (loading) {
+    return (
+      <section id="projects" className="container py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            My Recent Work <span className="ml-2 text-indigo-300">🧩</span>
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Loading projects...
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="rounded-xl border border-slate-600/30 overflow-hidden bg-gradient-to-br from-slate-800/40 to-slate-700/20 animate-pulse">
+              <div className="h-40 md:h-44 bg-slate-700"></div>
+              <div className="p-6">
+                <div className="h-6 bg-slate-700 rounded mb-2"></div>
+                <div className="h-4 bg-slate-700 rounded mb-4"></div>
+                <div className="flex gap-2 mb-4">
+                  <div className="h-6 w-16 bg-slate-700 rounded-full"></div>
+                  <div className="h-6 w-20 bg-slate-700 rounded-full"></div>
+                </div>
+                <div className="h-10 bg-slate-700 rounded"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="projects" className="container py-20">
@@ -479,13 +515,25 @@ export function Projects({ showViewAllLink = false }: { showViewAllLink?: boolea
                 )}
               </div>
 
-              <div className="pt-4 border-t border-slate-600/30 flex items-center justify-between">
-                <a href={p.href || "#contact"} className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
-                  View Case Study →
-                </a>
-                <a href="#contact" className="text-slate-400 hover:text-slate-200 text-sm transition-colors">
-                  Build Similar
-                </a>
+              <div className="pt-4 border-t border-slate-600/30 space-y-3">
+                <div className="flex items-center justify-between">
+                  <a href={p.href || "#contact"} className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
+                    View Details →
+                  </a>
+                  <a href="#contact" className="text-slate-400 hover:text-slate-200 text-sm transition-colors">
+                    Build Similar
+                  </a>
+                </div>
+                {p.visitUrl && (
+                  <a
+                    href={p.visitUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 font-medium text-white text-sm transition-all duration-300 shadow-md hover:shadow-lg"
+                  >
+                    🌐 Visit Live Site
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -496,6 +544,7 @@ export function Projects({ showViewAllLink = false }: { showViewAllLink?: boolea
 }
 
 export function Testimonials() {
+  const { testimonials, loading, error } = useTestimonials();
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -503,12 +552,35 @@ export function Testimonials() {
   const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || testimonials.length === 0) return;
     const id = setInterval(() => {
       setCurrent((c) => (c + 1) % testimonials.length);
     }, 4000);
     return () => clearInterval(id);
-  }, [isPaused]);
+  }, [isPaused, testimonials.length]);
+
+  if (loading) {
+    return (
+      <section className="container py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            What My Clients Say <span className="ml-2 text-pink-300">💬</span>
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Loading testimonials...
+          </p>
+        </div>
+        <div className="relative">
+          <div className="mx-auto max-w-3xl rounded-xl border border-white/15 p-7 md:p-10 bg-slate-900/70 shadow-md animate-pulse">
+            <div className="h-6 bg-slate-700 rounded mb-4"></div>
+            <div className="h-6 bg-slate-700 rounded mb-4"></div>
+            <div className="h-6 bg-slate-700 rounded w-3/4 mx-auto mb-6"></div>
+            <div className="h-4 bg-slate-700 rounded w-1/3 mx-auto"></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="container py-20">
@@ -605,22 +677,34 @@ export function FAQs() {
 }
 
 export function Brands() {
-  const row1 = [
-    { name: "HealthPlus", logo: "🏥" },
-    { name: "FinNext", logo: "💳" },
-    { name: "ShopSwift", logo: "🛒" },
-    { name: "MoveLogix", logo: "🚚" },
-    { name: "LearnLab", logo: "📚" },
-    { name: "BuildManu", logo: "🏭" },
-  ];
-  const row2 = [
-    { name: "MediCore", logo: "🧬" },
-    { name: "PayFlow", logo: "💰" },
-    { name: "QuickCart", logo: "🛍️" },
-    { name: "RoutePro", logo: "📦" },
-    { name: "EduSpark", logo: "🎓" },
-    { name: "FabWorks", logo: "⚙️" },
-  ];
+  const { brands, loading, error } = useBrands();
+
+  if (loading) {
+    return (
+      <section className="container py-16">
+        <div className="text-center mb-8">
+          <h3 className="text-2xl md:text-3xl font-semibold text-white">Brands I've Worked With <span className="ml-2 text-emerald-300">🤝</span></h3>
+          <p className="text-slate-400 mt-2">Loading brands...</p>
+        </div>
+        <div className="space-y-6">
+          <div className="marquee group">
+            <div className="marquee-track gap-4">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="w-40 h-16 rounded-md border border-white/10 bg-slate-800/40 flex items-center justify-center animate-pulse">
+                  <div className="w-16 h-8 bg-slate-700 rounded"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Split brands into two rows for marquee effect
+  const midPoint = Math.ceil(brands.length / 2);
+  const row1 = brands.slice(0, midPoint);
+  const row2 = brands.slice(midPoint);
 
   const track1 = [...row1, ...row1];
   const track2 = [...row2, ...row2];

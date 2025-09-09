@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSocialLinks } from "@/hooks/useSocialLinks";
 
 function GitHubIcon(props: React.SVGProps<SVGSVGElement>) {
 	return (
@@ -36,6 +37,22 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export default function NavBar() {
 	const [open, setOpen] = useState(false);
+	const { links } = useSocialLinks();
+
+	const getIcon = (iconName: string) => {
+		switch (iconName) {
+			case "github":
+				return GitHubIcon;
+			case "linkedin":
+				return LinkedInIcon;
+			case "twitter":
+				return XIcon;
+			case "instagram":
+				return InstagramIcon;
+			default:
+				return GitHubIcon;
+		}
+	};
 
 	return (
 		<nav className="container h-16 flex items-center justify-between">
@@ -47,10 +64,21 @@ export default function NavBar() {
 				<li><a href="/#projects" className="hover:text-blue-400 transition-colors font-medium">Work</a></li>
 				<li><a href="/#approach" className="hover:text-blue-400 transition-colors font-medium">Approach</a></li>
 				<li className="hidden lg:flex items-center gap-4 ml-2 pl-4 border-l border-white/10">
-					<a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" className="text-white hover:opacity-90 transition-opacity"><GitHubIcon width={22} height={22} /></a>
-					<a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" className="text-sky-500 hover:opacity-90 transition-opacity"><LinkedInIcon width={22} height={22} /></a>
-					<a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter/X" className="text-white hover:opacity-90 transition-opacity"><XIcon width={22} height={22} /></a>
-					<a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" className="text-pink-400 hover:opacity-90 transition-opacity"><InstagramIcon width={22} height={22} /></a>
+					{links.map((link) => {
+						const IconComponent = getIcon(link.icon);
+						return (
+							<a
+								key={link.id}
+								href={link.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label={link.name}
+								className={`${link.color} hover:opacity-90 transition-opacity`}
+							>
+								<IconComponent width={22} height={22} />
+							</a>
+						);
+					})}
 				</li>
 			</ul>
 
@@ -76,10 +104,21 @@ export default function NavBar() {
 							<li><a onClick={() => setOpen(false)} href="/#projects" className="block px-1 py-2 rounded hover:bg-white/5">Work</a></li>
 							<li><a onClick={() => setOpen(false)} href="/#approach" className="block px-1 py-2 rounded hover:bg-white/5">Approach</a></li>
 							<li className="flex items-center gap-4 px-1 pt-2">
-								<a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" className="text-white"><GitHubIcon width={20} height={20} /></a>
-								<a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" className="text-sky-500"><LinkedInIcon width={20} height={20} /></a>
-								<a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter/X" className="text-white"><XIcon width={20} height={20} /></a>
-								<a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" className="text-pink-400"><InstagramIcon width={20} height={20} /></a>
+								{links.map((link) => {
+									const IconComponent = getIcon(link.icon);
+									return (
+										<a
+											key={link.id}
+											href={link.url}
+											target="_blank"
+											rel="noopener noreferrer"
+											aria-label={link.name}
+											className={link.color}
+										>
+											<IconComponent width={20} height={20} />
+										</a>
+									);
+								})}
 							</li>
 							<li className="pt-2"><a onClick={() => setOpen(false)} href="https://wa.me/6006257942" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold">Let’s talk on WhatsApp</a></li>
 						</ul>

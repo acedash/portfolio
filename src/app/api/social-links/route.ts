@@ -1,9 +1,43 @@
 import { NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
-import { projects as fallback } from "@/lib/data";
 
-const filePath = path.join(process.cwd(), "src", "data", "projects.json");
+const filePath = path.join(process.cwd(), "src", "data", "social-links.json");
+
+const fallback = [
+  {
+    id: "github",
+    name: "GitHub",
+    url: "https://github.com/asrarbashir",
+    icon: "github",
+    color: "text-white",
+    order: 1
+  },
+  {
+    id: "linkedin",
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/asrarbashir",
+    icon: "linkedin",
+    color: "text-sky-500",
+    order: 2
+  },
+  {
+    id: "twitter",
+    name: "Twitter",
+    url: "https://twitter.com/asrarbashir",
+    icon: "twitter",
+    color: "text-blue-400",
+    order: 3
+  },
+  {
+    id: "instagram",
+    name: "Instagram",
+    url: "https://instagram.com/asrarbashir",
+    icon: "instagram",
+    color: "text-pink-500",
+    order: 4
+  }
+];
 
 export async function GET() {
   try {
