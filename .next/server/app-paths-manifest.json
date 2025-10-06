@@ -2,6 +2,6 @@
   "/admin/dashboard/page": "app/admin/dashboard/page.js",
   "/admin/projects/page": "app/admin/projects/page.js",
   "/projects/[slug]/page": "app/projects/[slug]/page.js",
-  "/admin/brands/page": "app/admin/brands/page.js",
-  "/admin/testimonials/page": "app/admin/testimonials/page.js"
+  "/admin/testimonials/page": "app/admin/testimonials/page.js",
+  "/admin/brands/page": "app/admin/brands/page.js"
 }
