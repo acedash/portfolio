@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import AdminLayout from "@/components/AdminLayout";
+import ImageUpload from "@/components/ImageUpload";
 
 interface Project {
   id: string;
@@ -272,17 +273,11 @@ export default function ProjectsAdmin() {
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-slate-300 mb-2">Project Image URL</label>
-                  <input
-                    type="url"
-                    value={formData.image}
-                    onChange={(e) => setFormData(prev => ({ ...prev, image: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50"
-                    placeholder="https://example.com/image.jpg"
-                    required
-                  />
-                </div>
+                <ImageUpload
+                  value={formData.image || ""}
+                  onChange={(url) => setFormData(prev => ({ ...prev, image: url }))}
+                  placeholder="Upload project image"
+                />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>

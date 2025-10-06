@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import AdminLayout from "@/components/AdminLayout";
+import LogoUpload from "@/components/LogoUpload";
 
 interface Brand {
   id: string;
@@ -163,32 +164,11 @@ export default function BrandsAdmin() {
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-slate-300 mb-2">Logo URL</label>
-                <input
-                  type="url"
-                  value={formData.logo}
-                  onChange={(e) => setFormData(prev => ({ ...prev, logo: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50"
-                  placeholder="https://example.com/logo.png"
-                  required
-                />
-                {formData.logo && (
-                  <div className="mt-2">
-                    <p className="text-slate-400 text-sm mb-2">Preview:</p>
-                    <div className="w-20 h-20 bg-slate-700 rounded-lg flex items-center justify-center overflow-hidden">
-                      <img
-                        src={formData.logo}
-                        alt="Logo preview"
-                        className="max-w-full max-h-full object-contain"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                        }}
-                      />
-                    </div>
-                  </div>
-                )}
-              </div>
+              <LogoUpload
+                value={formData.logo || ""}
+                onChange={(url) => setFormData(prev => ({ ...prev, logo: url }))}
+                placeholder="Upload brand logo"
+              />
 
               <div>
                 <label className="block text-sm font-semibold text-slate-300 mb-2">Website URL (Optional)</label>
@@ -260,7 +240,10 @@ export default function BrandsAdmin() {
                     className="max-w-full max-h-full object-contain"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling.style.display = 'block';
+                      const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (nextElement) {
+                        nextElement.style.display = 'block';
+                      }
                     }}
                   />
                 ) : null}

@@ -40,6 +40,7 @@ declare namespace __next_route_internal_types__ {
     | `/api/projects`
     | `/api/social-links`
     | `/api/testimonials`
+    | `/api/upload`
     | `/projects`
   type DynamicRoutes<T extends string = string> = 
     | `/api/brands/${SafeSlug<T>}`

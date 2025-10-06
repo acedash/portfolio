@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import AdminLayout from "@/components/AdminLayout";
+import AvatarUpload from "@/components/AvatarUpload";
 
 interface Testimonial {
   id: string;
@@ -247,16 +248,11 @@ export default function TestimonialsAdmin() {
                 </div>
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-slate-300 mb-2">Avatar URL (Optional)</label>
-                <input
-                  type="url"
-                  value={formData.avatar}
-                  onChange={(e) => setFormData(prev => ({ ...prev, avatar: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50"
-                  placeholder="https://example.com/avatar.jpg"
-                />
-              </div>
+              <AvatarUpload
+                value={formData.avatar || ""}
+                onChange={(url) => setFormData(prev => ({ ...prev, avatar: url }))}
+                placeholder="Upload client avatar"
+              />
 
               <div className="flex items-center gap-4">
                 <label className="flex items-center gap-2">
