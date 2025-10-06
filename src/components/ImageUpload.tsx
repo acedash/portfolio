@@ -14,10 +14,7 @@ export default function ImageUpload({ value, onChange, placeholder = "Upload an 
   const [error, setError] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
+  const uploadFile = async (file: File) => {
     // Validate file type
     const allowedTypes = ["image/jpeg", "image/jpg", "image/png", "image/webp", "image/gif"];
     if (!allowedTypes.includes(file.type)) {
@@ -58,14 +55,18 @@ export default function ImageUpload({ value, onChange, placeholder = "Upload an 
     }
   };
 
+  const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      await uploadFile(file);
+    }
+  };
+
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     if (file) {
-      const fakeEvent = {
-        target: { files: [file] }
-      } as React.ChangeEvent<HTMLInputElement>;
-      handleFileSelect(fakeEvent);
+      uploadFile(file);
     }
   };
 
