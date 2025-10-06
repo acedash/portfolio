@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
-import { socialLinks as fallback } from "@/lib/data";
 
 const dataDir = path.join(process.cwd(), "src", "data");
 const filePath = path.join(dataDir, "social-links.json");
@@ -11,7 +10,7 @@ export async function GET() {
     const data = await fs.readFile(filePath, "utf8");
     return NextResponse.json(JSON.parse(data));
   } catch (e) {
-    return NextResponse.json(fallback);
+    return NextResponse.json([]);
   }
 }
 
