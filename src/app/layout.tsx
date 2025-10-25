@@ -4,9 +4,9 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-	title: "Asrar Bashir — Technology Consultant & Developer",
+	title: "Syed Amaan Bukhari — AI/ML Engineer",
 	description:
-		"Personal technology consultant helping businesses build custom software solutions. E-commerce platforms, SaaS applications, and business automation that drive growth.",
+		"Personal AI/ML Engineer helping businesses build custom AI/ML solutions. E-commerce platforms, SaaS applications, and business automation that drive growth.",
 	icons: [{ rel: "icon", url: "/favicon.svg" }],
 };
 

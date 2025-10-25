@@ -1,7 +1,8 @@
 {
-  "/admin/dashboard/page": "app/admin/dashboard/page.js",
-  "/admin/projects/page": "app/admin/projects/page.js",
-  "/projects/[slug]/page": "app/projects/[slug]/page.js",
-  "/admin/testimonials/page": "app/admin/testimonials/page.js",
-  "/admin/brands/page": "app/admin/brands/page.js"
+  "/page": "app/page.js",
+  "/api/social-links/route": "app/api/social-links/route.js",
+  "/api/projects/route": "app/api/projects/route.js",
+  "/api/testimonials/route": "app/api/testimonials/route.js",
+  "/api/brands/route": "app/api/brands/route.js",
+  "/services/page": "app/services/page.js"
 }

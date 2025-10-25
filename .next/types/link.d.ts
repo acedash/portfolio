@@ -30,6 +30,7 @@ declare namespace __next_route_internal_types__ {
 
   type StaticRoutes = 
     | `/`
+    | `/about`
     | `/admin`
     | `/admin/brands`
     | `/admin/dashboard`
@@ -39,9 +40,10 @@ declare namespace __next_route_internal_types__ {
     | `/api/brands`
     | `/api/projects`
     | `/api/social-links`
-    | `/api/testimonials`
     | `/api/upload`
+    | `/api/testimonials`
     | `/projects`
+    | `/services`
   type DynamicRoutes<T extends string = string> = 
     | `/api/brands/${SafeSlug<T>}`
     | `/api/projects/${SafeSlug<T>}`

@@ -2,7 +2,7 @@
   {
     "id": "github",
     "name": "GitHub",
-    "url": "https://github.com/asrarbashir",
+    "url": "https://github.com/syedamaanbukhari",
     "icon": "github",
     "color": "text-white",
     "order": 1
@@ -10,7 +10,7 @@
   {
     "id": "linkedin",
     "name": "LinkedIn",
-    "url": "https://www.linkedin.com/in/asrarbashir",
+    "url": "https://www.linkedin.com/in/syedamaanbukhari",
     "icon": "linkedin",
     "color": "text-sky-500",
     "order": 2
@@ -18,17 +18,17 @@
   {
     "id": "twitter",
     "name": "Twitter",
-    "url": "https://twitter.com/asrarbashir",
+    "url": "https://twitter.com/syedamaanbukhari",
     "icon": "twitter",
     "color": "text-blue-400",
     "order": 3
   },
   {
-    "id": "instagram",
-    "name": "Instagram",
-    "url": "https://instagram.com/asrarbashir",
-    "icon": "instagram",
-    "color": "text-pink-500",
+    "id": "email",
+    "name": "Email",
+    "url": "mailto:amaan@example.com",
+    "icon": "mail",
+    "color": "text-green-500",
     "order": 4
   }
 ]

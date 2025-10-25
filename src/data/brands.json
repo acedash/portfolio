@@ -1,98 +1,50 @@
 [
   {
-    "id": "healthplus",
-    "name": "HealthPlus",
-    "logo": "🏥",
-    "website": "https://healthplus.com",
-    "description": "Healthcare technology company",
+    "id": "global-airlines",
+    "name": "Global Airlines",
+    "logo": "✈️",
+    "website": "https://globalairlines.com",
+    "description": "International airline group",
     "order": 1
   },
   {
-    "id": "finnext",
-    "name": "FinNext",
-    "logo": "💳",
-    "website": "https://finnext.com",
-    "description": "Financial technology solutions",
+    "id": "luxury-hotels",
+    "name": "Luxury Hotel Chain",
+    "logo": "🏨",
+    "website": "https://luxuryhotels.com",
+    "description": "Premium hospitality group",
     "order": 2
   },
   {
-    "id": "shopswift",
-    "name": "ShopSwift",
-    "logo": "🛒",
-    "website": "https://shopswift.com",
-    "description": "E-commerce platform",
+    "id": "international-airlines",
+    "name": "International Airlines",
+    "logo": "🌍",
+    "website": "https://internationalairlines.com",
+    "description": "Global aviation company",
     "order": 3
   },
   {
-    "id": "movelogix",
-    "name": "MoveLogix",
-    "logo": "🚚",
-    "website": "https://movelogix.com",
-    "description": "Logistics management system",
+    "id": "techstart",
+    "name": "TechStart Solutions",
+    "logo": "🚀",
+    "website": "https://techstart.com",
+    "description": "AI/ML technology startup",
     "order": 4
   },
   {
-    "id": "learnlab",
-    "name": "LearnLab",
-    "logo": "📚",
-    "website": "https://learnlab.com",
-    "description": "Educational technology platform",
+    "id": "dataflow",
+    "name": "DataFlow Analytics",
+    "logo": "📊",
+    "website": "https://dataflow.com",
+    "description": "Data science consulting",
     "order": 5
   },
   {
-    "id": "buildmanu",
-    "name": "BuildManu",
-    "logo": "🏭",
-    "website": "https://buildmanu.com",
-    "description": "Manufacturing automation",
+    "id": "cloudtech",
+    "name": "CloudTech AI",
+    "logo": "☁️",
+    "website": "https://cloudtech.ai",
+    "description": "Cloud AI platform",
     "order": 6
-  },
-  {
-    "id": "medicore",
-    "name": "MediCore",
-    "logo": "🧬",
-    "website": "https://medicore.com",
-    "description": "Medical research platform",
-    "order": 7
-  },
-  {
-    "id": "payflow",
-    "name": "PayFlow",
-    "logo": "💰",
-    "website": "https://payflow.com",
-    "description": "Payment processing solutions",
-    "order": 8
-  },
-  {
-    "id": "quickcart",
-    "name": "QuickCart",
-    "logo": "🛍️",
-    "website": "https://quickcart.com",
-    "description": "Shopping cart optimization",
-    "order": 9
-  },
-  {
-    "id": "routepro",
-    "name": "RoutePro",
-    "logo": "📦",
-    "website": "https://routepro.com",
-    "description": "Delivery route optimization",
-    "order": 10
-  },
-  {
-    "id": "eduspark",
-    "name": "EduSpark",
-    "logo": "🎓",
-    "website": "https://eduspark.com",
-    "description": "Online learning platform",
-    "order": 11
-  },
-  {
-    "id": "fabworks",
-    "name": "FabWorks",
-    "logo": "⚙️",
-    "website": "https://fabworks.com",
-    "description": "Industrial automation",
-    "order": 12
   }
 ]

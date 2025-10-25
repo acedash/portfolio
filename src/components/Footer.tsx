@@ -66,7 +66,7 @@ export default function Footer() {
 				<div className="grid gap-10 md:grid-cols-3 text-left">
 					{/* Brand + Social */}
 					<div>
-						<div className="text-2xl font-bold text-blue-400 mb-3">Asrar Bashir</div>
+						<div className="text-2xl font-bold text-blue-400 mb-3">Amaan Bukhari</div>
 						<p className="text-slate-400 mb-6 max-w-md">Technology consultant helping businesses grow with modern software, automation, and data-driven systems.</p>
 						<div className="flex items-center gap-4">
 							{links.map((link) => {
@@ -84,7 +84,7 @@ export default function Footer() {
 									</a>
 								);
 							})}
-							<a href="mailto:mailtokhanasrar@gmail.com" aria-label="Email" className="text-rose-300 hover:opacity-90 transition-opacity">
+							<a href="mailto:amaansyed285@gmail.com" aria-label="Email" className="text-rose-300 hover:opacity-90 transition-opacity">
 								<EmailIcon width={22} height={22} />
 							</a>
 						</div>
@@ -106,17 +106,17 @@ export default function Footer() {
 						<div className="text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</div>
 						<div className="space-y-3 text-slate-300">
 							<div>
-								<a href="mailto:mailtokhanasrar@gmail.com" className="hover:text-white transition-colors">
-									mailtokhanasrar@gmail.com
+								<a href="mailto:amaansyed285@gmail.com" className="hover:text-white transition-colors">
+									amaansyed285@gmail.com
 								</a>
 							</div>
 							<div>
-								<a href="tel:6006257942" className="hover:text-white transition-colors">
-									+91 6006257942
+								<a href="tel:7007175437" className="hover:text-white transition-colors">
+									+91 7007175437
 								</a>
 							</div>
 							<div className="pt-2">
-								<a href="https://wa.me/6006257942" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold text-sm">
+								<a href="https://wa.me/7007175437" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold text-sm">
 									💬 WhatsApp
 								</a>
 							</div>
@@ -125,7 +125,7 @@ export default function Footer() {
 				</div>
 
 				<div className="border-t border-white/10 mt-12 pt-8 text-center text-slate-400 text-sm">
-					<p>&copy; 2024 Asrar Bashir. All rights reserved.</p>
+					<p>&copy; 2025 Amaan Bukhari. All rights reserved.</p>
 				</div>
 			</div>
 		</footer>

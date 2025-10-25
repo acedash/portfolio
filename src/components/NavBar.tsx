@@ -56,7 +56,7 @@ export default function NavBar() {
 
 	return (
 		<nav className="container h-16 flex items-center justify-between">
-			<a href="/" className="font-bold tracking-wide text-2xl text-blue-400">Asrar Bashir</a>
+			<a href="/" className="font-bold tracking-wide text-2xl text-blue-400">Amaan Bukhari</a>
 
 			{/* Desktop nav */}
 			<ul className="hidden md:flex items-center gap-6 text-sm text-slate-300">
@@ -83,7 +83,7 @@ export default function NavBar() {
 			</ul>
 
 			<div className="flex items-center gap-3 md:hidden">
-				<a href="https://wa.me/6006257942" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold">WhatsApp</a>
+				<a href="https://wa.me/7006175437" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold">WhatsApp</a>
 				<button aria-label="Toggle menu" onClick={() => setOpen(!open)} className="w-9 h-9 grid place-items-center rounded-md border border-white/15 hover:bg-white/10">
 					<span className="block w-4 h-0.5 bg-white mb-1"></span>
 					<span className="block w-4 h-0.5 bg-white mb-1"></span>
@@ -91,7 +91,7 @@ export default function NavBar() {
 				</button>
 			</div>
 
-			<a href="https://wa.me/6006257942" className="hidden md:inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm bg-emerald-600 hover:bg-emerald-500 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl">
+			<a href="https://wa.me/7006175437" className="hidden md:inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm bg-emerald-600 hover:bg-emerald-500 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl">
 				<span>Let’s talk</span>
 			</a>
 
@@ -120,7 +120,7 @@ export default function NavBar() {
 									);
 								})}
 							</li>
-							<li className="pt-2"><a onClick={() => setOpen(false)} href="https://wa.me/6006257942" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold">Let’s talk on WhatsApp</a></li>
+							<li className="pt-2"><a onClick={() => setOpen(false)} href="https://wa.me/7006175437" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold">Let’s talk on WhatsApp</a></li>
 						</ul>
 					</div>
 				</div>

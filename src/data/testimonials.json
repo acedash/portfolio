@@ -1,20 +1,29 @@
 [
   {
-    "id": "michael-rodriguez",
-    "quote": "Working with Asrar was like having a CTO on our team. He understood our business challenges and built solutions that actually solved them. ROI was 400% in the first year.",
-    "author": "Michael Rodriguez, Founder - TechStart Solutions",
-    "company": "TechStart Solutions",
-    "role": "Founder",
+    "id": "david-kim",
+    "quote": "Amaan's AI chatbot transformed our customer service. We saw a 30% improvement in self-service resolution and our customers love the instant, accurate responses. The ROI was evident within the first month.",
+    "author": "David Kim, VP Customer Experience - Global Airlines",
+    "company": "Global Airlines",
+    "role": "VP Customer Experience",
     "rating": 5,
     "order": 1
   },
   {
-    "id": "sarah-chen",
-    "quote": "Asrar delivered our e-commerce platform in half the time we expected, and it's been running flawlessly for 18 months. Our conversion rates increased by 25% within the first quarter.",
-    "author": "Sarah Chen, CEO - Fashion Forward Inc.",
-    "company": "Fashion Forward Inc.",
-    "role": "CEO",
+    "id": "maria-rodriguez",
+    "quote": "The dynamic pricing system Amaan built increased our revenue by 20% while maintaining customer satisfaction. His ML models are not just accurate but also explainable, which was crucial for our business stakeholders.",
+    "author": "Maria Rodriguez, Revenue Manager - Luxury Hotels",
+    "company": "Luxury Hotel Chain",
+    "role": "Revenue Manager",
     "rating": 5,
     "order": 2
+  },
+  {
+    "id": "james-wilson",
+    "quote": "Amaan's fuel optimization model saved us $2.5M annually. His deep understanding of both aviation operations and machine learning made the difference. The system has been running flawlessly for over a year.",
+    "author": "James Wilson, Chief Operations Officer - International Airlines",
+    "company": "International Airlines",
+    "role": "Chief Operations Officer",
+    "rating": 5,
+    "order": 3
   }
 ]

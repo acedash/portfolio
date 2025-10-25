@@ -33,9 +33,9 @@ export function Hero() {
   const [currentTitle, setCurrentTitle] = useState(0);
   
   const titles = [
-    { text: "Full-Stack Developer", icon: "💻" },
-    { text: "Problem Solver", icon: "🧩" },
-    { text: "Digital Solutions Consultant", icon: "🌐" }
+    { text: "AI/ML Engineer", icon: "🤖" },
+    { text: "Data Scientist", icon: "📊" },
+    { text: "MLOps Specialist", icon: "⚙️" }
   ];
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export function Hero() {
           
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up animation-delay-200">
             <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-              Hi, I'm Asrar
+              Hi, I'm Amaan
             </span>
           </h1>
           
@@ -73,9 +73,9 @@ export function Hero() {
           </div>
           
           <p className="text-base md:text-xl text-slate-300 max-w-2xl leading-relaxed mb-8 animate-fade-in-up animation-delay-300 mx-auto md:mx-0">
-            I help startups and businesses build custom software solutions that drive growth. 
-            <span className="text-blue-400 font-semibold"> 5+ years</span> of experience delivering 
-            <span className="text-blue-400 font-semibold"> measurable results</span>.
+            I'm a client-facing Data Scientist and AI/ML engineer who turns complex problems into production systems. 
+            <span className="text-blue-400 font-semibold"> Specializing in agentic AI</span>, conversational systems, 
+            <span className="text-blue-400 font-semibold"> predictive pricing, and MLOps</span>.
           </p>
           
           {/* CTA Buttons */}
@@ -91,24 +91,25 @@ export function Hero() {
           {/* Quick Stats */}
           <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-8 animate-fade-in-up animation-delay-500">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">25+</div>
-              <div className="text-xs md:text-sm text-slate-400">Happy Clients</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">12%</div>
+              <div className="text-xs md:text-sm text-slate-400">Fuel Cost Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">5+</div>
-              <div className="text-xs md:text-sm text-slate-400">Years Experience</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">30%</div>
+              <div className="text-xs md:text-sm text-slate-400">Self-Service Improvement</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">99%</div>
-              <div className="text-xs md:text-sm text-slate-400">Success Rate</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">~20%</div>
+              <div className="text-xs md:text-sm text-slate-400">Revenue Uplift</div>
             </div>
           </div>
 
           {/* Capabilities Strip */}
           <div className="mt-6 text-slate-300/90 text-sm md:text-base flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4">
-            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">🧩 Custom Software</span>
-            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">🛒 E‑commerce & SaaS</span>
-            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">🤖 Automation & Integrations</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">🤖 Agentic AI</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">💬 Conversational Systems</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">📊 Predictive Pricing</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">⚙️ MLOps</span>
           </div>
         </div>
         
@@ -123,7 +124,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <Image 
                 src="/asrar-photo.jpeg" 
-                alt="Asrar Bashir - Technology Consultant" 
+                alt="Syed Amaan Bukhari - AI/ML Engineer" 
                 fill 
                 sizes="(min-width: 768px) 20rem, 16rem"
                 priority 
@@ -185,30 +186,30 @@ export function Hero() {
 export function Skills() {
   const approaches = [
     {
-      title: "Business Analysis & Strategy",
-      description: "I start by understanding your business model, challenges, and goals. This ensures every solution is aligned with your strategic objectives.",
-      icon: "🎯",
+      title: "Predictive Modeling & Analytics",
+      description: "Build supervised models (XGBoost, neural nets) for demand forecasting, pricing, churn, and more. Better forecasts lead to smarter inventory/pricing decisions and measurable revenue uplift.",
+      icon: "📊",
       color: "from-blue-500/20 to-blue-600/20",
       borderColor: "border-blue-500/30"
     },
     {
-      title: "Custom Solution Design", 
-      description: "I design solutions that fit your unique workflow, not force you to adapt to generic software. Every feature serves a business purpose.",
-      icon: "🏗️",
+      title: "MLOps & Production Deployment", 
+      description: "From data ingestion to production inference: ETL, model versioning (MLflow), CI/CD, monitoring, and rollback. Reliable models in production with traceability and automated retraining.",
+      icon: "⚙️",
       color: "from-green-500/20 to-green-600/20",
       borderColor: "border-green-500/30"
     },
     {
-      title: "Modern Technology Stack",
-      description: "I use proven, scalable technologies that ensure your solution grows with your business and stays secure and maintainable.",
-      icon: "⚡",
+      title: "Conversational AI & Chatbots",
+      description: "Design RAG systems, fine-tune LLMs, integrate LangChain/Bedrock, and validate via regression tests. Faster self-service, fewer support tickets, better CSAT.",
+      icon: "🤖",
       color: "from-purple-500/20 to-purple-600/20",
       borderColor: "border-purple-500/30"
     },
     {
-      title: "Ongoing Support & Growth",
-      description: "I don't just build and leave. I provide ongoing support and help you scale your solution as your business grows.",
-      icon: "🚀",
+      title: "Agentic AI & Automation",
+      description: "Build multi-agent orchestration (MCP), transactional agents for bookings/cancellations, and operational automation. Reduced manual handling, transactional consistency, 24/7 automated workflows.",
+      icon: "⚡",
       color: "from-orange-500/20 to-orange-600/20",
       borderColor: "border-orange-500/30"
     }
@@ -218,10 +219,10 @@ export function Skills() {
     <section id="approach" className="container py-20">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent animate-fade-in-up">
-          How I Solve Problems <span className="ml-2 text-purple-300">🧠</span>
+          My AI/ML Expertise <span className="ml-2 text-purple-300">🧠</span>
         </h2>
         <p className="text-xl text-slate-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-100">
-          I don't just write code — I solve business problems with technology. Here's my proven approach to delivering real results.
+          I don't just build models — I solve business problems with AI/ML. Here's my proven approach to delivering measurable results.
         </p>
       </div>
       
@@ -254,35 +255,35 @@ export function About() {
           {/* Left: Heading + Value Items */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent animate-fade-in-up">
-              Why Work With Me? <span className="ml-2 text-blue-300">👋</span>
+              About Me <span className="ml-2 text-blue-300">👋</span>
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl animate-fade-in-up animation-delay-100">
-              I'm not a big agency — I'm your hands-on partner. I align technology with your business so we ship the right solution quickly and reliably.
+              I'm an AI/ML engineer specializing in agentic AI, production ML systems, and applied deep learning. I care about clean data pipelines, reproducible experiments, and deploying reliable models that are observable and maintainable in production.
             </p>
 
             <div className="space-y-5">
               {[
                 {
-                  icon: "🎯",
-                  title: "Business-First Approach",
+                  icon: "🤖",
+                  title: "Agentic AI & Automation",
                   description:
-                    "I take time to understand your industry, challenges, and goals. Every solution is tailored to your specific needs, not a one-size-fits-all approach.",
+                    "Built agentic AI booking agent that automates bookings & cancellations end-to-end. Experience with fine-tuning large language models, RAG, and LLM-based agents.",
                   color: "from-blue-500/15 to-blue-600/15",
                   border: "border-blue-500/25",
                 },
                 {
-                  icon: "⚡",
-                  title: "Fast & Personal Service",
+                  icon: "⚙️",
+                  title: "Production ML Systems",
                   description:
-                    "No waiting for team meetings or handoffs. You get my full attention and direct communication throughout the entire project.",
+                    "Delivered production ML pipelines using FastAPI, Docker, Terraform, and AWS. Strong background in Python, TensorFlow/PyTorch, LangChain, and model monitoring.",
                   color: "from-green-500/15 to-green-600/15",
                   border: "border-green-500/25",
                 },
                 {
-                  icon: "🛡️",
-                  title: "Enterprise Quality",
+                  icon: "📊",
+                  title: "Data Science & Analytics",
                   description:
-                    "I build everything with enterprise-grade security and scalability. Your success is my reputation, so I never cut corners.",
+                    "My sweet spot: turning messy business problems into pragmatic ML solutions. I love working with product teams to prioritize what moves the needle, then moving fast to validate, iterate, and ship.",
                   color: "from-purple-500/15 to-purple-600/15",
                   border: "border-purple-500/25",
                 },
@@ -306,9 +307,9 @@ export function About() {
           <div>
             <div className="space-y-5 mb-6">
               {[
-                { number: 5, suffix: "+", label: "Years Experience", icon: "⏰" },
-                { number: 25, suffix: "+", label: "Projects Completed", icon: "🚀" },
-                { number: 99, suffix: "%", label: "Success Rate", icon: "✅" },
+                { number: 12, suffix: "%", label: "Fuel Cost Reduction", icon: "✈️" },
+                { number: 30, suffix: "%", label: "Self-Service Improvement", icon: "💬" },
+                { number: 20, suffix: "%", label: "Revenue Uplift", icon: "📈" },
               ].map((s, i) => (
                 <div
                   key={s.label}
@@ -341,18 +342,18 @@ export function About() {
 export function ServicesPreview() {
   const items = [
     {
-      title: "Custom Software",
-      description: "Tailored platforms that fit your workflow and deliver measurable business impact.",
-      icon: "🧩",
+      title: "Predictive Modeling",
+      description: "Build supervised models for demand forecasting, pricing, churn, and more with measurable business impact.",
+      icon: "📊",
     },
     {
-      title: "E‑commerce & SaaS",
-      description: "Revenue-focused, scalable products with smooth UX and reliable payments.",
-      icon: "🛒",
+      title: "MLOps & Deployment",
+      description: "End-to-end ML pipelines from data ingestion to production inference with monitoring and CI/CD.",
+      icon: "⚙️",
     },
     {
-      title: "Automation & Integrations",
-      description: "Save time by connecting your tools and automating manual processes.",
+      title: "Conversational AI",
+      description: "Design RAG systems, fine-tune LLMs, and build chatbots that improve customer service.",
       icon: "🤖",
     },
   ];
@@ -361,10 +362,10 @@ export function ServicesPreview() {
     <section id="services" className="container py-20">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent animate-fade-in-up">
-          What I Do <span className="ml-2 text-amber-300">🛠️</span>
+          AI/ML Services <span className="ml-2 text-amber-300">🛠️</span>
         </h2>
         <p className="text-xl text-slate-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-100">
-          Clear offerings focused on outcomes, not buzzwords.
+          AI/ML solutions focused on measurable business outcomes, not just technical complexity.
         </p>
       </div>
       
@@ -385,8 +386,8 @@ export function ServicesPreview() {
       </div>
 
       <div className="text-center mt-12">
-        <a href="#contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 font-semibold text-white shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300">
-          Book a call →
+        <a href="/services" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 font-semibold text-white shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300">
+          View all services →
         </a>
       </div>
     </section>
@@ -397,11 +398,12 @@ export function Projects({ showViewAllLink = false }: { showViewAllLink?: boolea
   const { projects, loading, error } = useProjects();
   const [filter, setFilter] = useState<string>("All");
 
-  const categories = ["All", "E-commerce", "Healthcare"];
+  const categories = ["All", "Conversational AI", "Predictive Analytics", "Optimization"];
 
   const projectCategory = (name: string): string => {
-    if (name.toLowerCase().includes("e-commerce")) return "E-commerce";
-    if (name.toLowerCase().includes("healthcare")) return "Healthcare";
+    if (name.toLowerCase().includes("chatbot") || name.toLowerCase().includes("conversational")) return "Conversational AI";
+    if (name.toLowerCase().includes("pricing") || name.toLowerCase().includes("predictive")) return "Predictive Analytics";
+    if (name.toLowerCase().includes("optimization") || name.toLowerCase().includes("fuel")) return "Optimization";
     return "Other";
   };
 
@@ -490,7 +492,9 @@ export function Projects({ showViewAllLink = false }: { showViewAllLink?: boolea
               <div className="h-40 md:h-44 bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative flex items-center justify-center">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-blue-600/20 to-purple-600/20" />
                 <div className="text-5xl md:text-6xl opacity-70 group-hover:opacity-100 transition-opacity">
-                  {p.name.includes("E-commerce") ? "🛒" : p.name.includes("Healthcare") ? "🏥" : "💻"}
+                  {p.name.includes("Chatbot") || p.name.includes("Conversational") ? "🤖" : 
+                   p.name.includes("Pricing") || p.name.includes("Predictive") ? "📊" : 
+                   p.name.includes("Fuel") || p.name.includes("Optimization") ? "✈️" : "💻"}
                 </div>
                 <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-blue-500/80 text-white text-[11px] font-medium">
                   {p.stack[0]}
@@ -515,7 +519,7 @@ export function Projects({ showViewAllLink = false }: { showViewAllLink?: boolea
                 )}
               </div>
 
-              <div className="pt-4 border-t border-slate-600/30 space-y-3">
+              {/* <div className="pt-4 border-t border-slate-600/30 space-y-3">
                 <div className="flex items-center justify-between">
                   <a href={p.href || "#contact"} className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
                     View Details →
@@ -534,7 +538,7 @@ export function Projects({ showViewAllLink = false }: { showViewAllLink?: boolea
                     🌐 Visit Live Site
                   </a>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
@@ -754,17 +758,17 @@ export function ContactCTA() {
     <section id="contact" className="container py-16">
       <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/20 via-indigo-600/15 to-purple-600/20 p-8 md:p-10 text-center shadow-lg">
         <h3 className="text-2xl md:text-3xl font-bold mb-3">
-          Ready to talk about your project? <span className="ml-2 text-emerald-300">💬</span>
+          Ready to discuss your AI/ML project? <span className="ml-2 text-emerald-300">💬</span>
         </h3>
         <p className="text-slate-300 max-w-2xl mx-auto mb-6">
-          I reply fast. Share a quick brief and I’ll suggest the best way to move forward.
+          I reply fast. Share your AI/ML challenges and I'll suggest the best approach to deliver measurable results.
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
-          <a href="https://wa.me/6006257942" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold shadow-md">
-            💬 Let’s talk on WhatsApp
+          <a href="mailto:amaan@example.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 transition-colors font-semibold shadow-md">
+            💬 Let's talk
           </a>
-          <a href="mailto:mailtokhanasrar@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/15 hover:border-white/30 hover:text-white transition-colors font-semibold">
-            ✉️ Email me
+          <a href="/services" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/15 hover:border-white/30 hover:text-white transition-colors font-semibold">
+            🛠️ View services
           </a>
         </div>
       </div>
