@@ -133,3 +133,14 @@ export const brands = [
   { name: "Google", logo: "/logos/google.svg", url: "https://google.com" },
   { name: "Amazon", logo: "/logos/amazon.svg", url: "https://amazon.com" },
 ];
+export const projects = [{
+  id: "ecommerce-fashion-platform",
+  name: "E-commerce Platform for Fashion Retailer",
+  stack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+  summary:
+    "Built a complete online store that increased sales by 300% in 6 months. Features include inventory management, customer analytics, and mobile-first design.",
+  href: "/projects/ecommerce-fashion-platform",
+  visitUrl: "https://fashion-store-demo.vercel.app",
+  category: "E-commerce",
+  description: "A comprehensive e-commerce solution built for a growing fashion retailer. The platform features a modern, mobile-first design with advanced inventory management, real-time analytics, and seamless payment processing.",
+}];
