@@ -133,14 +133,128 @@ export const brands = [
   { name: "Google", logo: "/logos/google.svg", url: "https://google.com" },
   { name: "Amazon", logo: "/logos/amazon.svg", url: "https://amazon.com" },
 ];
-export const projects = [{
-  id: "ecommerce-fashion-platform",
-  name: "E-commerce Platform for Fashion Retailer",
-  stack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-  summary:
-    "Built a complete online store that increased sales by 300% in 6 months. Features include inventory management, customer analytics, and mobile-first design.",
-  href: "/projects/ecommerce-fashion-platform",
-  visitUrl: "https://fashion-store-demo.vercel.app",
-  category: "E-commerce",
-  description: "A comprehensive e-commerce solution built for a growing fashion retailer. The platform features a modern, mobile-first design with advanced inventory management, real-time analytics, and seamless payment processing.",
-}];
+export const projects = [
+  {
+    "id": "airline-chatbot-system",
+    "name": "AI-Powered Airline Customer Service Chatbot",
+    "stack": [
+      "Python",
+      "LangChain",
+      "OpenAI GPT-4",
+      "FastAPI",
+      "Docker",
+      "AWS Bedrock"
+    ],
+    "summary": "Built a production conversational AI system that improved self-service resolution by 30% and reduced support ticket volume by 40%.",
+    "href": "/projects/airline-chatbot-system",
+    "visitUrl": "https://airline-chatbot-demo.vercel.app",
+    "category": "Conversational AI",
+    "description": "An intelligent customer service chatbot for a major airline that handles booking modifications, flight information, and customer support queries using advanced RAG (Retrieval-Augmented Generation) and fine-tuned language models.",
+    "features": [
+      "Natural language understanding for flight queries",
+      "Automated booking modifications and cancellations",
+      "Real-time flight status and gate information",
+      "Multi-language support (English, Spanish, French)",
+      "Integration with airline reservation systems",
+      "Sentiment analysis and escalation triggers",
+      "Comprehensive conversation analytics"
+    ],
+    "challenges": "The main challenge was ensuring the chatbot could handle complex, multi-turn conversations while maintaining accuracy in flight information and booking operations. We implemented robust error handling and fallback mechanisms.",
+    "results": [
+      "30% improvement in self-service resolution rate",
+      "40% reduction in support ticket volume",
+      "25% decrease in average response time",
+      "95% customer satisfaction score for chatbot interactions"
+    ],
+    "techDetails": {
+      "ai_ml": "OpenAI GPT-4, LangChain, RAG with vector embeddings",
+      "backend": "FastAPI with async processing, Redis for caching",
+      "deployment": "Docker containers on AWS ECS with auto-scaling",
+      "monitoring": "MLflow for model tracking, CloudWatch for performance metrics"
+    },
+    "timeline": "8 weeks",
+    "client": "Global Airlines Group"
+  },
+  {
+    "id": "dynamic-pricing-ml-system",
+    "name": "Dynamic Pricing ML System for Hospitality",
+    "stack": [
+      "Python",
+      "XGBoost",
+      "TensorFlow",
+      "Apache Spark",
+      "Kubernetes",
+      "MLflow"
+    ],
+    "summary": "Developed a machine learning system that increased revenue by ~20% through intelligent dynamic pricing for hotel bookings.",
+    "href": "/projects/dynamic-pricing-ml-system",
+    "visitUrl": "https://pricing-demo.vercel.app",
+    "category": "Predictive Analytics",
+    "description": "A sophisticated ML-powered dynamic pricing system that optimizes hotel room rates based on demand patterns, competitor pricing, seasonal trends, and market conditions in real-time.",
+    "features": [
+      "Real-time price optimization using ensemble models",
+      "Competitor price monitoring and analysis",
+      "Demand forecasting with time series models",
+      "A/B testing framework for pricing strategies",
+      "Revenue impact tracking and reporting",
+      "Automated model retraining pipeline",
+      "Price elasticity analysis and insights"
+    ],
+    "challenges": "Balancing revenue optimization with customer satisfaction while ensuring pricing decisions were explainable and auditable. We implemented comprehensive model monitoring and A/B testing frameworks.",
+    "results": [
+      "~20% revenue uplift from optimized pricing",
+      "15% increase in booking conversion rates",
+      "12% improvement in revenue per available room (RevPAR)",
+      "99.9% system uptime with automated failover"
+    ],
+    "techDetails": {
+      "ml_models": "XGBoost, LSTM networks, ensemble methods",
+      "data_pipeline": "Apache Spark for ETL, Kafka for real-time streaming",
+      "deployment": "Kubernetes with auto-scaling, Redis for caching",
+      "monitoring": "MLflow for experiment tracking, Grafana dashboards"
+    },
+    "timeline": "10 weeks",
+    "client": "Luxury Hotel Chain"
+  },
+  {
+    "id": "flight-fuel-optimization",
+    "name": "Flight-Level Fuel Cost Optimization ML Model",
+    "stack": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "Apache Airflow",
+      "AWS SageMaker",
+      "PostgreSQL"
+    ],
+    "summary": "Created a machine learning model that reduced fuel costs by 12% (annualized ~$2.5M savings) through optimized flight planning and routing.",
+    "href": "/projects/flight-fuel-optimization",
+    "visitUrl": "https://fuel-optimization-demo.vercel.app",
+    "category": "Optimization",
+    "description": "An advanced ML system that optimizes flight routes, altitudes, and speeds to minimize fuel consumption while maintaining safety standards and on-time performance.",
+    "features": [
+      "Weather pattern analysis and integration",
+      "Aircraft performance modeling",
+      "Route optimization algorithms",
+      "Real-time fuel consumption predictions",
+      "Carbon footprint tracking",
+      "Pilot recommendation system",
+      "Cost-benefit analysis dashboard"
+    ],
+    "challenges": "Integrating complex weather data, aircraft performance characteristics, and air traffic control constraints into a unified optimization model while ensuring safety compliance.",
+    "results": [
+      "12% reduction in fuel costs (annualized ~$2.5M savings)",
+      "8% decrease in carbon emissions",
+      "5% improvement in on-time performance",
+      "15% reduction in flight planning time"
+    ],
+    "techDetails": {
+      "ml_models": "Random Forest, Gradient Boosting, Neural Networks",
+      "data_sources": "Weather APIs, aircraft telemetry, flight plans",
+      "infrastructure": "AWS SageMaker, Apache Airflow for orchestration",
+      "database": "PostgreSQL with time-series optimization"
+    },
+    "timeline": "14 weeks",
+    "client": "International Airlines"
+  }
+];
