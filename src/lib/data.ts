@@ -25,7 +25,7 @@ export const industries = [
   "E-commerce", "Healthcare", "FinTech", "Education", "Real Estate", "Manufacturing", "Logistics", "Media"
 ];
 
-export const projects = [
+export const oldProjects = [
   {
     id: "ecommerce-fashion-platform",
     name: "E-commerce Platform for Fashion Retailer",
