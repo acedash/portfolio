@@ -123,7 +123,7 @@ export function Hero() {
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden ring-4 ring-blue-500/30 shadow-2xl shadow-blue-500/25 transform hover:scale-105 transition-all duration-500 group">
               <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <Image 
-                src="/asrar-photo.jpeg" 
+                src="/asrar-photo-2.jpg" 
                 alt="Syed Amaan Bukhari - AI/ML Engineer" 
                 fill 
                 sizes="(min-width: 768px) 20rem, 16rem"
@@ -667,10 +667,10 @@ export function FAQs() {
             Let's Build Something Amazing Together
           </div>
           <div className="flex gap-6 justify-center flex-wrap">
-            <a href="mailto:khanasrar@gmail.com" className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 font-semibold text-white shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 text-lg">
+            <a href="mailto:amaansyed285@gmail.com" className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 font-semibold text-white shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 text-lg">
               Start Your Project
             </a>
-            <a href="tel:+1234567890" className="px-8 py-4 rounded-xl border-2 border-white/20 hover:border-blue-400 hover:text-blue-400 font-semibold transition-all duration-300 hover:scale-105 text-lg">
+            <a href="tel:+917007175437" className="px-8 py-4 rounded-xl border-2 border-white/20 hover:border-blue-400 hover:text-blue-400 font-semibold transition-all duration-300 hover:scale-105 text-lg">
               Schedule a Call
             </a>
           </div>
