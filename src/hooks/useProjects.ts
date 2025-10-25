@@ -10,12 +10,13 @@ interface Project {
   category: string;
   description: string;
   features: string[];
-  challenges?: string;
+  challenges: string;
   results: string[];
-  techDetails?: Record<string, string>;
-  timeline?: string;
-  client?: string;
+  techDetails: Record<string, string | undefined>; // ✅ allow optional fields
+  timeline: string;
+  client: string;
 }
+
 
 export function useProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
