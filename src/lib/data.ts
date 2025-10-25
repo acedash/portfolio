@@ -127,3 +127,9 @@ export const faqs = [
     a: "I focus on business outcomes, not just code. Every solution is designed with your ROI, scalability, and long-term success in mind. I'm your technology partner, not just a contractor.",
   },
 ];
+// src/lib/data.ts
+export const brands = [
+  { name: "Apple", logo: "/logos/apple.svg", url: "https://apple.com" },
+  { name: "Google", logo: "/logos/google.svg", url: "https://google.com" },
+  { name: "Amazon", logo: "/logos/amazon.svg", url: "https://amazon.com" },
+];
